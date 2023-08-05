@@ -1,0 +1,27 @@
+<h1 mat-dialog-title>Ürün Ekleme Formu</h1>
+<form>
+    <mat-list role="list">
+        <mat-list-item role="listitem">
+            <mat-form-field>
+                <mat-label>Ürün Adı</mat-label>
+                <input matInput placeholder="" #NameInput>
+            </mat-form-field>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <mat-form-field>
+                <mat-label>Ürün Stoğu</mat-label>
+                <input matInput placeholder="" type="number" min="0" #OnHandInput>
+            </mat-form-field>
+        </mat-list-item>
+        <mat-list-item role="listitem">
+            <mat-form-field>
+                <mat-label>Ürün Fiyatı</mat-label>
+                <input matInput placeholder="" type="number" min="0" #PriceInput>
+            </mat-form-field>
+        </mat-list-item>
+    </mat-list>
+</form>
+<div mat-dialog-actions style="display: flex;justify-content: flex-end;">
+    <button mat-button (click)="onNoClick()" mat-raised-button color="warn">İptal</button>
+    <button mat-button (click)="onAddProduct(NameInput,OnHandInput,PriceInput)" mat-raised-button color="primary">Ekle</button>
+ </div>

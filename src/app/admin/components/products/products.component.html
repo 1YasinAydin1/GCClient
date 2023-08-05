@@ -1,0 +1,9 @@
+<div>
+    <div style="display:flex; flex-direction: row-reverse;" class="m-4">
+        <button mat-raised-button color="primary" (click)="openDialogAddProduct()">Ürün Ekle</button>
+    </div>
+    <div>
+        <app-listproduct></app-listproduct>
+        <app-fileupload [options]="FileUploadOptions"></app-fileupload>
+    </div>
+</div>

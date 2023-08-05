@@ -1,0 +1,18 @@
+<div class="center w-25 p-3" style="border: 1px dashed #002aff; border-radius: 30px;">
+    <ngx-file-drop dropZoneLabel="Drop files here" [accept]="options.accept" (onFileDrop)="selectedFiles($event)">
+        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector" class="row">
+            <b><span class="col-9 col-sm-8 text-center">{{options.explanation}}</span> Sürükle</b>
+            <span class="mx-3">Veya</span>
+            <button type="button" class="col-4 col-sm-3 h-50  btn btn-rounded btn-primary"
+                (click)="openFileSelector()">Seç</button>
+        </ng-template>
+    </ngx-file-drop>
+    <div class="upload-table" *ngIf="files">
+        <ul class="list-group list-group-flush my-3">
+            <li *ngFor="let item of files; let i=index" class="list-group-item">{{ item.relativePath }}</li>
+        </ul>
+    </div>
+    <div class="d-flex justify-content-center mt-2">
+        <button type="button" class="btn btn-rounded btn-success w-75" (click)="onClickUpload()">Yükle</button>
+    </div>
+</div>

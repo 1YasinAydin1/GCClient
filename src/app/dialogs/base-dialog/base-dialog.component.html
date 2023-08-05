@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Dikkat</h1>
+<div mat-dialog-content>
+  <p>{{messageDialog}}</p>
+</div>
+<div mat-dialog-actions style="display: flex;justify-content: flex-end;">
+    <button mat-button (click)="onNoClick()" mat-raised-button color="warn">İptal</button>
+    <button mat-button [mat-dialog-close]="data" mat-raised-button
+        color="primary">Evet</button>
+</div>
